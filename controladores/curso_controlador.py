@@ -25,7 +25,7 @@ def exibir_cursos(usuario): # função para mostrar o curso em tela quando selec
     print("\n••• Cursos Disponíveis •••")
     for curso in cursos:
         print(f"{curso['id']}. {curso['titulo']}")
-    escolha = input("Escolha o curso para iniciar (ou 'sair' para voltar): ")
+    escolha = input("Escolha o curso para iniciar, ou clique 'ENTER' para voltar ao menu anterior: ")
     if escolha.lower() == 'sair':
         return
     for curso in cursos:
