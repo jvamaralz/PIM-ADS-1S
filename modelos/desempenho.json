@@ -13,5 +13,10 @@
         "usuario": "joao",
         "curso_id": 1,
         "acertos": 3
+    },
+    {
+        "usuario": "teste",
+        "curso_id": 3,
+        "acertos": 3
     }
 ]
