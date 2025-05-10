@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "titulo": "Lógica Computacional com Python",
+    "conteudo": "Atribuição em Python é o processo de associar um valor a uma variável, usando o operador =, como em x = 10. A estrutura de repetição while executa um bloco de código enquanto uma condição for verdadeira, enquanto o for itera sobre uma sequência, como em for i in range(5). O tipo int é usado para números inteiros, como x = 10. O tipo str representa textos, por exemplo, nome = joao. O tipo bool armazena valores booleanos, como ativo = True. Esses conceitos permitem controlar dados, fluxos e condições no código.",
+    "perguntas": [
+      {
+        "pergunta": "Qual símbolo é usado para atribuição em Python?",
+        "alternativas": ["==", "=>", ":", "="],
+        "resposta_correta": 3
+      },
+      {
+        "pergunta": "Qual estrutura usamos para repetir algo até uma condição ser falsa?",
+        "alternativas": ["if", "for", "while", "switch"],
+        "resposta_correta": 2
+      },
+      {
+        "pergunta": "Qual tipo de dado representa 'True' ou 'False'?",
+        "alternativas": ["int", "bool", "str", "float"],
+        "resposta_correta": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Segurança Digital",
+    "conteudo": "Phishing é um ataque em que criminosos tentam enganar as vítimas para obter dados pessoais, como senhas, através de mensagens falsas. É importante verificar sempre a autenticidade das fontes antes de fornecer informações. Para proteger arquivos, faça backups regularmente. Isso cria cópias de segurança que permitem restaurar dados em caso de falhas ou ataques. Uma boa prática de segurança é usar autenticação em 2 fatores (2FA). Além da senha, um segundo código é necessário para acessar suas contas, o que aumenta a proteção contra acessos não autorizados.",
+    "perguntas": [
+      {
+        "pergunta": "Qual dessas é uma boa prática de segurança?",
+        "alternativas": ["Usar a mesma senha em todos os sites", "Usar '123456'", "Usar autenticação de dois fatores", "Compartilhar senhas por e-mail"],
+        "resposta_correta": 2
+      },
+      {
+        "pergunta": "O que é phishing?",
+        "alternativas": ["Atualização de sistema", "Ataque por força bruta", "Técnica para enganar e roubar dados", "Tipo de firewall"],
+        "resposta_correta": 2
+      },
+      {
+        "pergunta": "Como proteger seus arquivos importantes?",
+        "alternativas": ["Não fazer nada", "Backup em lugar seguro", "Deixá-los no desktop", "Escrever a senha em papel"],
+        "resposta_correta": 1
+      }
+    ]
+  }
+]

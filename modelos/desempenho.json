@@ -1,0 +1,17 @@
+[
+    {
+        "usuario": "joao",
+        "curso_id": 1,
+        "acertos": 0
+    },
+    {
+        "usuario": "joao",
+        "curso_id": 2,
+        "acertos": 2
+    },
+    {
+        "usuario": "joao",
+        "curso_id": 1,
+        "acertos": 3
+    }
+]
