@@ -1,8 +1,8 @@
-from controladores import controlador, curso_controlador, relatorio_controlador
+from controladores import controlador, curso_controlador, relatorio_controlador # importando os arquivos necessários
 
-def menu_login():
+def menu_login(): # exibe o menu inicial de login
     while True:
-        print("\n--- Plataforma PIM educação com Python ---")
+        print("\n••• Plataforma PIM educação com Python •••")
         print("1. Login")
         print("2. Cadastrar novo usuário")
         print("3. Sair")
@@ -20,12 +20,12 @@ def menu_login():
         else:
             print("Opção inválida.")
 
-def menu_principal(usuario):
+def menu_principal(usuario): # exibe e o menu principal após o login para acesso aos cursos e relatório
     usuarios = controlador.carregar_usuarios()
     is_admin = any(u['username'] == usuario and u.get('admin', False) for u in usuarios)
 
     while True:
-        print(f"\n--- Bem-vindo, {usuario} ---")
+        print(f"\n••• Bem-vindo, {usuario} •••")
         print("1. Acessar Cursos")
         print("2. Ver meu Relatório")
         if is_admin:
@@ -46,6 +46,6 @@ def menu_principal(usuario):
         else:
             print("Opção inválida.")
 
-if __name__ == "__main__":
+if __name__ == "__main__": # inicia a aplicação 
     usuario_logado = menu_login()
     menu_principal(usuario_logado)

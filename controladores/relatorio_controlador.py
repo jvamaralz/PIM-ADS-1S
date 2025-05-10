@@ -27,7 +27,7 @@ def relatorio_usuario(usuario): # função para gerar um relatório individual d
         return
 
     acertos = [d['acertos'] for d in dados]
-    print(f"\n--- Relatório de {usuario} ---")
+    print(f"\n••• Relatório de {usuario} •••")
     print(f"Quantidade de cursos feitos: {len(dados)}")
     print(f"Média de acertos: {mean(acertos):.2f}")
     print(f"Mediana de acertos: {median(acertos)}")
@@ -38,7 +38,7 @@ def relatorio_usuario(usuario): # função para gerar um relatório individual d
 
     for d in dados:
         nome_curso = next((c['titulo'] for c in cursos if c['id'] == d['curso_id']), "Desconhecido")
-        print(f"- {nome_curso}: {d['acertos']} acertos")
+        print(f"• {nome_curso}: {d['acertos']} acertos")
 
 def relatorio_geral(): # gera um rel com o desempenho de todos os usuários do json, só usuário admin
     desempenho = carregar_desempenhos()
@@ -49,20 +49,20 @@ def relatorio_geral(): # gera um rel com o desempenho de todos os usuários do j
         return
 
     usuarios = set(d['usuario'] for d in desempenho)
-    print("\n--- Relatório Geral ---")
+    print("\n••• Relatório Geral •••")
     for u in usuarios:
         relatorio_usuario(u)
 
-    print("\n--- Estatísticas Gerais por Curso ---")
+    print("\n••• Estatísticas Gerais por Curso •••")
     for curso in cursos:
         acertos_curso = [d['acertos'] for d in desempenho if d['curso_id'] == curso['id']]
         if acertos_curso:
             print(f"\nCurso: {curso['titulo']}")
-            print(f"- Média de acertos: {mean(acertos_curso):.2f}")
-            print(f"- Mediana de acertos: {median(acertos_curso)}")
+            print(f"• Média de acertos: {mean(acertos_curso):.2f}")
+            print(f"• Mediana de acertos: {median(acertos_curso)}")
             try:
-                print(f"- Moda de acertos: {mode(acertos_curso)}")
+                print(f"• Moda de acertos: {mode(acertos_curso)}")
             except StatisticsError:
-                print("- Moda de acertos: Não há moda (valores únicos)")
+                print("• Moda de acertos: Não há moda (valores únicos)")
         else:
             print(f"\nCurso: {curso['titulo']} - Sem dados registrados ainda.")

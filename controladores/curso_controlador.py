@@ -22,7 +22,7 @@ def salvar_desempenho(usuario, curso_id, acertos): # salvas os desempenhos de ac
 
 def exibir_cursos(usuario): # função para mostrar o curso em tela quando selecionado 
     cursos = carregar_cursos()
-    print("\n--- Cursos Disponíveis ---")
+    print("\n••• Cursos Disponíveis •••")
     for curso in cursos:
         print(f"{curso['id']}. {curso['titulo']}")
     escolha = input("Escolha o curso para iniciar (ou 'sair' para voltar): ")
@@ -35,7 +35,7 @@ def exibir_cursos(usuario): # função para mostrar o curso em tela quando selec
     print("Curso não encontrado.")
 
 def executar_curso(usuario, curso): # função para puxar as perguntas dos cursos selecionado
-    print(f"\n--- {curso['titulo']} ---")
+    print(f"\n••• {curso['titulo']} •••")
     print(curso['conteudo'])
     input("\nPressione Enter para iniciar a provinha. ")
     acertos = 0
