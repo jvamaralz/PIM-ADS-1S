@@ -42,5 +42,28 @@
         "resposta_correta": 1
       }
     ]
+  },
+
+{
+    "id": 3,
+    "titulo": "Sistemas Operacionais",
+    "conteudo": "Windows e Linux são dois sistemas operacionais amplamente utilizados. O Windows é conhecido por sua interface amigável e ampla compatibilidade com softwares comerciais, sendo o mais utilizado no mundo, especialmente em ambientes corporativos e domésticos. Já o Linux é um sistema de código aberto, conhecido por sua segurança, estabilidade e maior controle pelo usuário, sendo mais comum em servidores e ambientes técnicos. Escolhemos o Windows para este projeto principalmente por sua popularidade e facilidade de uso, o que garante maior acessibilidade aos usuários e colaboradores que já estão familiarizados com esse sistema.",
+    "perguntas": [
+      {
+        "pergunta": "Qual é a principal característica do Windows destacada no texto?",
+        "alternativas": ["É gratuito e totalmente aberto ao público", "É mais seguro que o Linux em servidores'", "Tem interface amigável e ampla compatibilidade com softwares", "É exclusivo para desenvolvedores técnicos"],
+        "resposta_correta": 2
+      },
+      {
+        "pergunta": "Por que o Linux é mais comum em servidores?",
+        "alternativas": ["orque tem melhor design visual", "Porque oferece mais jogos compatíveis", "Porque é mais popular em ambientes domésticos", "Porque é seguro, estável e oferece mais controle ao usuário"],
+        "resposta_correta": 3
+      },
+      {
+        "pergunta": "Qual o principal motivo para a escolha do Windows neste projeto?",
+        "alternativas": ["Ele é mais barato que o Linux", "Tem mais ferramentas para programadores", "Sua popularidade e facilidade de uso", "Ele consome menos recursos do sistema"],
+        "resposta_correta": 2
+      }
+    ]
   }
 ]
