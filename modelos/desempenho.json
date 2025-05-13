@@ -23,5 +23,10 @@
         "usuario": "renata",
         "curso_id": 2,
         "acertos": 2
+    },
+    {
+        "usuario": "renata",
+        "curso_id": 3,
+        "acertos": 2
     }
 ]

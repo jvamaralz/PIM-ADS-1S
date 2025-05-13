@@ -16,5 +16,11 @@
         "senha": "1",
         "idade": "42",
         "admin": false
+    },
+    {
+        "username": "kleber",
+        "senha": "1",
+        "idade": "36",
+        "admin": false
     }
 ]
