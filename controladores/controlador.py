@@ -1,6 +1,7 @@
 import json
 import os
 
+
 USERS_FILE = 'modelos/usuarios.json'
 
 def carregar_usuarios(): # carregando o usuário do json, retornando uma lista de usuários
@@ -20,7 +21,8 @@ def cadastrar_usuario(): # realiaza o cadatro de um novo usuário
         print("Usuário já existe.")
         return
     senha = input("Escolha uma senha: ")
-    usuarios.append({"username": username, "senha": senha, "admin": False})
+    idade = input("Qual sua idade: ")
+    usuarios.append({"username": username, "senha": senha,"idade": idade, "admin": False})
     salvar_usuarios(usuarios)
     print("Usuário cadastrado com sucesso!")
 

@@ -1,3 +1,7 @@
+import time
+
+inicio = time.time()
+
 from controladores import controlador, curso_controlador, relatorio_controlador # importando os arquivos necessários
 
 def menu_login(): # exibe o menu inicial de login
@@ -49,3 +53,9 @@ def menu_principal(usuario): # exibe e o menu principal após o login para acess
 if __name__ == "__main__": # inicia a aplicação 
     usuario_logado = menu_login()
     menu_principal(usuario_logado)
+
+fim = time.time()
+
+tempo_execucao = fim - inicio
+
+print(f"O tempo de execução foi de exatamente: {tempo_execucao:.4f} ")

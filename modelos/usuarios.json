@@ -2,11 +2,19 @@
     {
         "username": "joao",
         "senha": "1",
+        "idade": 24,
         "admin": true
     },
     {
         "username": "teste",
         "senha": "1",
+        "idade": 23,
+        "admin": false
+    },
+    {
+        "username": "renata",
+        "senha": "1",
+        "idade": "42",
         "admin": false
     }
 ]
