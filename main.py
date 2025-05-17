@@ -1,8 +1,8 @@
 import time
 
-inicio = time.time()
+inicio = time.time() # váriável que vai calcular o tempo de exdecução do programa. 
 
-from controladores import controlador, curso_controlador, relatorio_controlador # importando os arquivos necessários
+from controladores import controlador, curso_controlador, relatorio_controlador # importando os arquivos necessários.
 
 def menu_login(): # exibe o menu inicial de login
     while True:
@@ -24,7 +24,7 @@ def menu_login(): # exibe o menu inicial de login
         else:
             print("Opção inválida.")
 
-def menu_principal(usuario): # exibe e o menu principal após o login para acesso aos cursos e relatório
+def menu_principal(usuario): # exibe e o menu principal após o login para acesso aos cursos e relatório.
     usuarios = controlador.carregar_usuarios()
     is_admin = any(u['username'] == usuario and u.get('admin', False) for u in usuarios)
 
@@ -50,7 +50,7 @@ def menu_principal(usuario): # exibe e o menu principal após o login para acess
         else:
             print("Opção inválida.")
 
-if __name__ == "__main__": # inicia a aplicação 
+if __name__ == "__main__": # inicia a aplicação.
     usuario_logado = menu_login()
     menu_principal(usuario_logado)
 
