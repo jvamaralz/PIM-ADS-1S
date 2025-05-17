@@ -33,6 +33,9 @@ def login_usuario(): # realiza o login do usuário
     for i in usuarios:
         if i['username'] == username and i['senha'] == senha: # verificando se o usuário e senha para acessar
             print(f"Bem-vindo, {username}!")
+            i['logins'] = i.get('logins', 0) + 1 #adicionando um login ao usuário 
+            salvar_usuarios(usuarios)
             return username
     print("Usuário ou senha inválidos.")
     return None
+

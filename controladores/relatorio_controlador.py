@@ -4,6 +4,13 @@ from statistics import mean, median, mode, StatisticsError
 
 DESEMPENHO_FILE = 'modelos/desempenho.json'
 CURSOS_FILE = 'data/cursos.json'
+USERS_FILE = 'modelos/usuarios.json'
+
+def carregar_usuarios():
+    if not os.path.exists(USERS_FILE):
+        return []
+    with open(USERS_FILE, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 def carregar_desempenhos(): # função para carregar o desempenho do usuário no json 
     if not os.path.exists(DESEMPENHO_FILE):
@@ -20,7 +27,16 @@ def carregar_cursos(): # carrega os cursos a partir do json, em lista
 def relatorio_usuario(usuario): # função para gerar um relatório individual de acordo com o usuário de login exibindo cursos que foram feitos, média, moda e mediana dos acertos
     desempenho = carregar_desempenhos()
     cursos = carregar_cursos()
+    usuarios = carregar_usuarios()
     dados = [d for d in desempenho if d['usuario'] == usuario]
+    
+    usuario_info = next((u for u in usuarios if u['username'] == usuario), None)
+    logins = usuario_info.get('logins', 0) if usuario_info else 0
+    tempo_total = usuario_info.get('tempo_total_execucao', 0) if usuario_info else 0
+
+    print(f"\n••• Relatório de {usuario} •••")
+    print(f"Logins realizados: {logins}")
+    print(f"Tempo total de execução: {tempo_total:.2f} segundos")
 
     if not dados:
         print("\nNenhum desempenho registrado.")

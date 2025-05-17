@@ -1,4 +1,5 @@
 import time
+import json
 
 inicio = time.time() # váriável que vai calcular o tempo de exdecução do programa. 
 
@@ -52,10 +53,29 @@ def menu_principal(usuario): # exibe e o menu principal após o login para acess
 
 if __name__ == "__main__": # inicia a aplicação.
     usuario_logado = menu_login()
+    inicio = time.time() # váriável que vai calcular o tempo de exdecução do programa. 
     menu_principal(usuario_logado)
+    fim = time.time()
+    tempo_execucao = fim - inicio # gravando o tempo de execução
 
-fim = time.time()
+    print(f"O tempo de execução foi de exatamente: {tempo_execucao:.4f} ")
+    
+    usuarios = controlador.carregar_usuarios()# Atualizar tempo de execução do usuário
+    for u in usuarios:
+        if u['username'] == usuario_logado:
+            u['tempo_total_execucao'] = u.get('tempo_total_execucao', 0) + tempo_execucao
+            break
+    controlador.salvar_usuarios(usuarios)
+    
+with open('modelos/usuarios.json', 'r', encoding='utf-8') as f:
+    usuarios = json.load(f)
 
-tempo_execucao = fim - inicio
+for usuario in usuarios: # incrementando o tmepo de execução ao json, para o relatório
+    if usuario['username'] == usuario_logado:
+        if 'tempo_total_execucao' not in usuario:
+            usuario['tempo_total_execucao'] = 0
+        usuario['tempo_total_execucao'] += tempo_execucao
+        break
 
-print(f"O tempo de execução foi de exatamente: {tempo_execucao:.4f} ")
+with open('modelos/usuarios.json', 'w', encoding='utf-8') as f:
+    json.dump(usuarios, f, indent=4)

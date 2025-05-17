@@ -3,24 +3,32 @@
         "username": "admin",
         "senha": "1",
         "idade": 24,
-        "admin": true
+        "admin": true,
+        "logins": 7,
+        "tempo_total_execucao": 7.586606979370117
     },
     {
         "username": "teste",
         "senha": "1",
         "idade": 23,
-        "admin": false
+        "admin": false,
+        "logins": 3,
+        "tempo_total_execucao": 0
     },
     {
         "username": "renata",
         "senha": "1",
         "idade": "42",
-        "admin": false
+        "admin": false,
+        "logins": 3,
+        "tempo_total_execucao": 0
     },
     {
         "username": "kleber",
         "senha": "1",
         "idade": "36",
-        "admin": false
+        "admin": false,
+        "logins": 3,
+        "tempo_total_execucao": 0
     }
 ]

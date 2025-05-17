@@ -1,16 +1,16 @@
 [
     {
-        "usuario": "joao",
+        "usuario": "admin",
         "curso_id": 1,
         "acertos": 0
     },
     {
-        "usuario": "joao",
+        "usuario": "admin",
         "curso_id": 2,
         "acertos": 2
     },
     {
-        "usuario": "joao",
+        "usuario": "admin",
         "curso_id": 1,
         "acertos": 3
     },
@@ -27,6 +27,11 @@
     {
         "usuario": "renata",
         "curso_id": 3,
+        "acertos": 2
+    },
+    {
+        "usuario": "admin",
+        "curso_id": 1,
         "acertos": 2
     }
 ]
